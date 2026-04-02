@@ -44,8 +44,8 @@ setInterval(()=>{
     //y: z->x right hand rule
     //x: y->z right hand rule
     //z: x->y right hand rule
-    /*attention: ini c.pos is -z, after c.x rotated, the c.z is now -y and c.y is now z
-    so if you wanna rotate c by z you have to rotate c.y negatively
+    /*attention: init c.pos is -z, after c.x rotated, the c.z is now -y and c.y is now z
+    so if you want to rotate c by z you have to rotate c.y negatively
     */ 
     camera.position.x = -Math.sin(theta)*5;
     camera.position.y = -Math.cos(theta)*5;
