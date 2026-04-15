@@ -52,7 +52,7 @@ position is the relative position that makes the parent obj position the (0,0,0)
 */
 //light - sun (directional light for parallel rays)
 const light = new THREE.DirectionalLight(0xffffff, 10)
-light.position.set(-1, 0, 0) //cast from sun
+light.position.set(-20, 0, 0) //cast from sun
 light.castShadow = true
 light.shadow.mapSize.set(1024, 1024)
 light.shadow.camera.near = 0.5
@@ -78,11 +78,12 @@ doesn't change the nums of '1'
 //build
 earthMesh.add(moonMesh)
 sunMesh.add(earthMesh)
+sunMesh.add(light)
 scene.add(sunMesh)
-scene.add(light)
+
 objL.push(moonMesh, earthMesh, sunMesh)
 //span&render
-const theta = Math.PI/3
+const theta = Math.PI
 const rota = (theta)=>{
     objL.forEach(it=>{
         let axes = new THREE.AxesHelper(3)
